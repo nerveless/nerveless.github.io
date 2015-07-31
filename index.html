@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <title>Clarelle's Website</title>
         
         <!-- styling -->
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link rel="stylesheet" type="text/css" href="css/pinterest-style.css" />
-	    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" />
-		<style type="text/css">
-			body {
-				background: rgba(231, 231, 231, 0.43);
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/pinterest-style.css" />
+        <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" />
+	<style type="text/css">
+	body {
+		background: rgba(231, 231, 231, 0.43);
                 text-align: center;
                 margin: 50px;
                 background-color: grey;
-			}
-            h1 {
-                line-height:32px
-            }
-			.free-wall {
-				margin: 15px;
-			}
-			.brick {
-				width: 221.2px;
-			}
-			.info {
-				padding: 15px;
-				color: #333;
-			}
-			.brick img {
-				margin: 0px;
-				padding: 0px;
-				display: block;
-			}
-            .galleryContainer {
+	}
+         h1 {
+               line-height:32px
+        }
+	.free-wall {
+		margin: 15px;
+	}
+	.brick {
+		width: 221.2px;
+	}
+	.info {
+		padding: 15px;
+		color: #333;
+	}
+	.brick img {
+		margin: 0px;
+		padding: 0px;
+		display: block;
+	}
+       .galleryContainer {
                 margin: 50px auto;
                 max-width: 1200px !important;
                 background-color: darkgray;
                 padding: 10px;
                 border-radius: 5px;
-                
-            }
+        }
             
-       <!-- .active{
-                z-index:99;
-            }
-            .inactive{
-                display:none;
-            } -->
-		</style>
+        <!-- 
+       .active{z-index:99;}
+       .inactive{display:none;} 
+        -->
+	</style>
         
         <!-- jquery imported here -->
         <script src="js/jquery-1.11.3.min.js"></script>
@@ -56,10 +52,9 @@
         <script src="js/freewall.js"></script>
         <!-- fancybox imported here -->
         <script src="fancybox/jquery.fancybox.pack.js"></script>
-        
     </head>
     <body>
-        
+    	
         <h1>Hi! I'm Clarelle and this is my website.</h1>
         
         <div class="galleryContainer" >
@@ -160,43 +155,43 @@
                   </a>
               </div>
             </div>
-		</div>
+	</div>
         
-            <script type="text/javascript">
-            $(document).ready(function() {
+    <script type="text/javascript">
+    $(document).ready(function() {
 
-                /*freewall used here*/
-                    //setting new variable to specified div as new freewall object
-                    var wall = new Freewall("#freewall"); 
-                    //calling function to wall with specified properties; (this makes the images responsive to the size of their container, using the 'freewall' api)
-                    wall.reset({
-                        selector: '.brick',
-                        animate: true,
-                        cellW: 200,
-                        cellH: 'auto',
-                        onResize: function() {
-                            wall.fitWidth();
-                        }
-                    });
-                    //freewall function to fit the total width of a row of images in their parent container
-                    wall.container.find('.brick img').load(function() {
-                        wall.fitWidth();
-                    });
-            
-                /*fancybox used here*/
-                    //append fancybox to all elements of ".fancybox" class
-                    $(".fancybox").fancybox({
-                        //<a> link titles will appear over popup images in the bottom left
-                        helpers : {
-                            title : {
-                                type : 'over'
-                            }
-                        }
-                    });
-                
-                
+        /*freewall used here*/
+            //setting new variable to specified div as new freewall object
+            var wall = new Freewall("#freewall"); 
+            //calling function to 'wall' object with specified properties; 
+            //(this makes the images responsive to the size of their container, using the 'freewall' api)
+            wall.reset({
+                selector: '.brick',
+                animate: true,
+                cellW: 200,
+                cellH: 'auto',
+                onResize: function() {
+                    wall.fitWidth();
+                }
             });
-            </script>
+            //freewall function to fit the total width of images in their parent container
+            wall.container.find('.brick img').load(function() {
+                wall.fitWidth();
+            });
+    
+        /*fancybox used here*/
+            //append fancybox to all elements of ".fancybox" class
+            $(".fancybox").fancybox({
+                //<a> link titles will appear above popup images in the bottom left of the modal
+                helpers : {
+                    title : {
+                        type : 'over'
+                    }
+                }
+            });
+        
+    });
+    </script>
         
     </body>
 </html>
