@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Clarelle's Website</title>
+        
+        <!-- styling -->
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/pinterest-style.css" />
+	    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" />
+		<style type="text/css">
+			body {
+				background: rgba(231, 231, 231, 0.43);
+                text-align: center;
+                margin: 50px;
+                background-color: grey;
+			}
+            h1 {
+                line-height:32px
+            }
+			.free-wall {
+				margin: 15px;
+			}
+			.brick {
+				width: 221.2px;
+			}
+			.info {
+				padding: 15px;
+				color: #333;
+			}
+			.brick img {
+				margin: 0px;
+				padding: 0px;
+				display: block;
+			}
+            .galleryContainer {
+                margin: 50px auto;
+                max-width: 1200px !important;
+                background-color: darkgray;
+                padding: 10px;
+                border-radius: 5px;
+                
+            }
+            
+       <!-- .active{
+                z-index:99;
+            }
+            .inactive{
+                display:none;
+            } -->
+		</style>
+        
+        <!-- jquery imported here -->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <!-- freewall imported here -->
+        <script src="js/freewall.js"></script>
+        <!-- fancybox imported here -->
+        <script src="fancybox/jquery.fancybox.pack.js"></script>
+        
+    </head>
+    <body>
+        
+        <h1>Hi! I'm Clarelle and this is my website.</h1>
+        
+        <div class="galleryContainer" >
+            <div id="freewall" class="free-wall" >
+              <div class="brick">
+                  <a href="Graphics/1.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/1.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/2.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/2.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/3.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/3.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/4.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/4.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/5.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/5.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/6.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/6.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/7.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/7.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/8.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/8.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/truck_anim.gif" class="fancybox" rel="gallery1" title="I made sprites for this game!">
+                      <img class="swapthis" src="Graphics/truck_static.gif" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/2.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/2.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/1.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/1.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree1.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree1.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree2.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree2.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree3.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree3.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree4.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree4.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree5.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree5.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree6.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree6.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree7.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree7.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick">
+                  <a href="Graphics/trees/tree8.png" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/trees/tree8.png" width="100%">
+                  </a>
+              </div>
+            </div>
+		</div>
+        
+            <script type="text/javascript">
+            $(document).ready(function() {
+
+                /*freewall used here*/
+                    //setting new variable to specified div as new freewall object
+                    var wall = new Freewall("#freewall"); 
+                    //freewall function with specified properties; (this makes the images responsive to the size of their container through the 'freewall' api)
+                    wall.reset({
+                        selector: '.brick',
+                        animate: true,
+                        cellW: 200,
+                        cellH: 'auto',
+                        onResize: function() {
+                            wall.fitWidth();
+                        }
+                    });
+                    //freewall function to fit the total width of a row of images in their parent container
+                    wall.container.find('.brick img').load(function() {
+                        wall.fitWidth();
+                    });
+            
+                /*fancybox used here*/
+                    //append fancybox to all elements of ".fancybox" class
+                    $(".fancybox").fancybox({
+                        //<a> link titles will appear over popup images in the bottom left
+                        helpers : {
+                            title : {
+                                type : 'over'
+                            }
+                        }
+                    });
+                
+                
+            });
+            </script>
+        
+    </body>
+</html>
