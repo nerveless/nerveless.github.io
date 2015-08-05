@@ -1,197 +1,439 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Clarelle's Website</title>
         
+        <title>Clarelle's Website</title>
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
         <!-- styling -->
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" type="text/css" href="css/pinterest-style.css" />
-        <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" />
-	<style type="text/css">
-	body {
-		background: rgba(231, 231, 231, 0.43);
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/pinterest-style.css" />
+	    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" />
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	    <link rel="stylesheet" type="text/css" href="css/pace-load.css" />
+		<style type="text/css">
+			body {
+				background: rgba(231, 231, 231, 0.43);
                 text-align: center;
                 margin: 50px;
                 background-color: grey;
-	}
-         h1 {
-               line-height:32px;
-        }
-	.free-wall {
-		margin: 15px;
-	}
-	.brick {
-		width: 221.2px;
-	}
-	.info {
-		padding: 15px;
-		color: #333;
-	}
-	.brick img {
-		margin: 0px;
-		padding: 0px;
-		display: block;
-	}
-       .galleryContainer {
-                margin: 50px auto;
+			}
+            h1 {
+                line-height:32px
+            }
+			.free-wall {
+				margin: 15px;
+			}
+			.brick {
+				width: 221.2px;
+			}
+			.info {
+				padding: 15px;
+				color: #333;
+			}
+			.brick img {
+				margin: 0px;
+				padding: 0px;
+				display: block;
+			}
+            .galleryContainer {
+                margin: 10px auto;
                 max-width: 1200px !important;
                 background-color: darkgray;
                 padding: 10px;
                 border-radius: 5px;
-        }
+                
+            }
             
-        <!-- 
-       .active{z-index:99;}
-       .inactive{display:none;} 
-        -->
-	</style>
+            .fadeIn {
+                opacity: 1;
+                  -webkit-transition: opacity 1s ease-in-out;
+                  -moz-transition: opacity 1s ease-in-out;
+                  -ms-transition: opacity 1s ease-in-out;
+                  -o-transition: opacity 1s ease-in-out;
+                  transition: opacity 1s ease-in-out;
+            }
+            
+            .fadeOut {
+                opacity: .5;
+                  -webkit-transition: opacity 1s ease-in-out;
+                  -moz-transition: opacity 1s ease-in-out;
+                  -ms-transition: opacity 1s ease-in-out;
+                  -o-transition: opacity 1s ease-in-out;
+                  transition: opacity 1s ease-in-out;
+            }
+            .pace-running .s3-loader{
+                zoom:1;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)"; /*for IE8 or IE9 only should come BEFORE filter*/
+                filter:alpha(opacity=10);
+                opacity:0.1;
+            }
+            .pace-done .s3-loader{
+                zoom:1;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; /*for IE8 or IE9 only should come BEFORE filter*/
+                filter:alpha(opacity=100);
+                opacity:1;
+                -webkit-transition:opacity 1s linear;
+                -moz-transition:opacity 1s linear;
+                -o-transition:opacity 1s linear;
+                transition:opacity 1s linear;
+            }
+            
+            .noPointerEvents {
+                pointer-events: none;
+            }
+       <!-- .active{
+                z-index:99;
+            }
+            .inactive{
+                display:none;
+            } -->
+		</style>
         
         <!-- jquery imported here -->
         <script src="js/jquery-1.11.3.min.js"></script>
+        <!-- pace imported here -->
+        <script src="js/pace.min.js"></script>
         <!-- freewall imported here -->
         <script src="js/freewall.js"></script>
         <!-- fancybox imported here -->
         <script src="fancybox/jquery.fancybox.pack.js"></script>
     </head>
     <body>
-    	
-        <h1>Hi! I'm Clarelle and this is my website.</h1>
         
-        <div class="galleryContainer" >
-            <div id="freewall" class="free-wall" >
-              <div class="brick">
-                  <a href="Graphics/1.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/1.jpg" width="100%">
+        <h1>Hi! I'm Clarelle and this is my website.</h1>
+        <br/>
+        <div class="tabNav">
+            <button id="All" class="btn btn-primary">All</button>
+            <button id="Marketing" class="btn btn-primary">Marketing</button>
+            <button id="School" class="btn btn-primary">School</button>
+            <button id="Personal" class="btn btn-primary">Personal</button>
+            <button id="Trees" class="btn btn-primary">Trees</button>
+        </div>
+        
+        <div class="galleryContainer s3-loader">
+            <div id="freewall" class="free-wall">
+              <div class="brick marketing">
+                  <a href="Graphics/Marketing/1.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/Marketing/1.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/2.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/2.jpg" width="100%">
+              <div class="brick marketing">
+                  <a href="Graphics/Marketing/2.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/Marketing/2.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/3.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/3.jpg" width="100%">
+              <div class="brick marketing">
+                  <a href="Graphics/Marketing/3.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/Marketing/3.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/4.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/4.jpg" width="100%">
+              <div class="brick marketing">
+                  <a href="Graphics/Marketing/4.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/Marketing/4.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/5.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/5.jpg" width="100%">
+              <div class="brick marketing">
+                  <a href="Graphics/Marketing/5.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/Marketing/5.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/6.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/6.jpg" width="100%">
+              <div class="brick marketing">
+                  <a href="Graphics/Marketing/6.jpg" class="fancybox" rel="gallery1" title="">
+                      <img src="Graphics/Marketing/6.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/7.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/7.jpg" width="100%">
+              <div class="brick marketing">
+                  <a href="Graphics/Marketing/truck_anim.gif" class="fancybox" rel="gallery1" title="I made sprites for this game!">
+                      <img class="swapthis" src="Graphics/Marketing/truck_static.gif" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/8.jpg" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/8.jpg" width="100%">
+            
+              <div class="brick school">
+                  <a href="Graphics/School/1.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/1.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/truck_anim.gif" class="fancybox" rel="gallery1" title="I made sprites for this game!">
-                      <img class="swapthis" src="Graphics/truck_static.gif" width="100%">
+              <div class="brick school">
+                  <a href="Graphics/School/2.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/2.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/2.png" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/2.png" width="100%">
+              <div class="brick school">
+                  <a href="Graphics/School/3.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/3.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/1.png" class="fancybox" rel="gallery1" title="">
-                      <img src="Graphics/1.png" width="100%">
+              <div class="brick school">
+                  <a href="Graphics/School/4.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/4.jpg" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree1.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick school">
+                  <a href="Graphics/School/5.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/5.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick school">
+                  <a href="Graphics/School/6.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/6.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick school">
+                  <a href="Graphics/School/7.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/7.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick school">
+                  <a href="Graphics/School/8.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/School/8.jpg" width="100%">
+                  </a>
+              </div>
+            
+              <div class="brick personal">
+                  <a href="Graphics/Personal/1.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/1.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/2.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/2.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/3.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/3.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/5.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/5.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/6.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/6.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/7.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/7.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/8.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/8.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/9.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/9.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/10.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/10.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/11.jpg" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/11.jpg" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/12.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/12.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/13.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/13.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/14.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/14.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/15.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/15.png" width="100%">
+                  </a>
+              </div>
+              <div class="brick personal">
+                  <a href="Graphics/Personal/16.png" class="fancybox" rel="gallery" title="">
+                      <img src="Graphics/Personal/16.png" width="100%">
+                  </a>
+              </div>
+                
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree1.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree1.png" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree2.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree2.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree2.png" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree3.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree3.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree3.png" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree4.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree4.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree4.png" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree5.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree5.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree5.png" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree6.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree6.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree6.png" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree7.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree7.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree7.png" width="100%">
                   </a>
               </div>
-              <div class="brick">
-                  <a href="Graphics/trees/tree8.png" class="fancybox" rel="gallery1" title="">
+              <div class="brick trees">
+                  <a href="Graphics/trees/tree8.png" class="fancybox" rel="gallery" title="">
                       <img src="Graphics/trees/tree8.png" width="100%">
                   </a>
               </div>
+                
             </div>
-	</div>
+		</div>
         
-    <script type="text/javascript">
-    $(document).ready(function() {
+            <script type="text/javascript">   
+            $(window).load(function () {    
+                paceOptions = {
+                  ajax: true, // disabled
+                  document: true, // disabled
+                  eventLag: true, // disabled
+                  elements: {
+                    selectors: ['body']
+                  }
+                };  
+            }) 
+            $(document).ready(function() {         
 
-        /*freewall used here*/
-            //setting new variable to specified div as new freewall object
-            var wall = new Freewall("#freewall"); 
-            //calling function to 'wall' object with specified properties; 
-            //(this makes the images responsive to the size of their container, using the 'freewall' api)
-            wall.reset({
-                selector: '.brick',
-                animate: true,
-                cellW: 200,
-                cellH: 'auto',
-                onResize: function() {
-                    wall.fitWidth();
+                /*freewall used here*/
+                    //setting new variable to specified div as new freewall object
+                    var wall = new Freewall("#freewall"); 
+                    //freewall function with specified properties; (this makes the images responsive to the size of their container through the 'freewall' api)
+                    wall.reset({
+                        selector: '.brick',
+                        animate: true,
+                        cellW: 200,
+                        cellH: 'auto',
+                        onResize: function() {
+                            wall.fitWidth();
+                        }
+                    });
+                    //freewall function to fit the total width of a row of images in their parent container
+                    wall.container.find('.brick img').load(function() {
+                        wall.fitWidth();
+                    });
+            
+                /*fancybox used here*/
+                    //append fancybox to all elements of ".fancybox" class
+                    $(".fancybox").fancybox({
+                        //<a> link titles will appear over popup images in the bottom left
+                        helpers : {
+                            title : {
+                                type : 'over'
+                            }
+                        }
+                    });
+                
+                    $('#All').on('click', function(e){
+                        e.preventDefault();
+                        $('.school').fadeTo( "slow", 1);
+                        $('.personal').fadeTo( "slow", 1);
+                        $('.trees').fadeTo( "slow", 1);
+                        $('.marketing').fadeTo( "slow", 1);
+                        $('.brick').removeClass('noPointerEvents');
+                        $(".brick a").attr("rel", "gallery");
+                    });
+                
+                    $('#Marketing').on('click', function(e){
+                        e.preventDefault();
+                        $('.school').fadeTo( "slow" , 0.3);
+                        $('.school').addClass('noPointerEvents');
+                        $('.personal').fadeTo( "slow" , 0.3);
+                        $('.personal').addClass('noPointerEvents');
+                        $('.trees').fadeTo( "slow" , 0.3);
+                        $('.trees').addClass('noPointerEvents');
+                        $('.marketing').fadeTo( "slow", 1);
+                        $('.marketing').removeClass('noPointerEvents');
+                        
+                        $(".marketing a").attr("rel", "gallery1");
+                    });
+                
+                    $('#School').on('click', function(e){
+                        e.preventDefault();
+                        $('.marketing').fadeTo( "slow" , 0.3);
+                        $('.marketing').addClass('noPointerEvents');
+                        $('.personal').fadeTo( "slow" , 0.3);
+                        $('.personal').addClass('noPointerEvents');
+                        $('.trees').fadeTo( "slow" , 0.3);
+                        $('.trees').addClass('noPointerEvents');
+                        $('.school').fadeTo( "slow", 1);
+                        $('.school').removeClass('noPointerEvents');
+                        
+                        $(".school a").attr("rel", "gallery2");
+                    });
+                
+                    $('#Personal').on('click', function(e){
+                        e.preventDefault();
+                        $('.school').fadeTo( "slow" , 0.3);
+                        $('.school').addClass('noPointerEvents');
+                        $('.marketing').fadeTo( "slow" , 0.3);
+                        $('.marketing').addClass('noPointerEvents');
+                        $('.trees').fadeTo( "slow" , 0.3);
+                        $('.trees').addClass('noPointerEvents');
+                        $('.personal').fadeTo( "slow", 1);
+                        $('.personal').removeClass('noPointerEvents');
+                        
+                        $(".personal a").attr("rel", "gallery3");
+                    });
+                
+                    $('#Trees').on('click', function(e){
+                        e.preventDefault();
+                        $('.school').fadeTo( "slow" , 0.3);
+                        $('.school').addClass('noPointerEvents');
+                        $('.personal').fadeTo( "slow" , 0.3);
+                        $('.personal').addClass('noPointerEvents');
+                        $('.marketing').fadeTo( "slow" , 0.3);
+                        $('.marketing').addClass('noPointerEvents');
+                        $('.trees').fadeTo("slow", 1);
+                        $('.trees').removeClass('noPointerEvents');
+                        
+                        $(".trees a").attr("rel", "gallery4");
+                    });
+                
+            });
+
+            /*ANGULAAARRRRRR
+                (function () {
+                    var app = angular.module('imageGallery', []);
+                    app.controller('ImageController', function () {
+                        $scope.images = [];
+                        $scope.dir = "http://nerveless.github.io/Graphics/";
+                        $scope.getImagePath = function(imageName) {
+                            return "http://nerveless.github.io/Graphics/" + imageName;
+                        };
+                        
+                    });
                 }
-            });
-            //freewall function to fit the total width of images in their parent container
-            wall.container.find('.brick img').load(function() {
-                wall.fitWidth();
-            });
-    
-        /*fancybox used here*/
-            //append fancybox to all elements of ".fancybox" class
-            $(".fancybox").fancybox({
-                //<a> link titles will appear above popup images in the bottom left of the modal
-                helpers : {
-                    title : {
-                        type : 'over'
-                    }
-                }
-            });
-        
-    });
-    </script>
+            */
+            </script>
         
     </body>
 </html>
