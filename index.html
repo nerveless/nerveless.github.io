@@ -3,7 +3,7 @@
     <head>
         
         <title>Clarelle's Website</title>
-        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <meta http-equiv="Cache-control" content="no-cache">
         <!-- styling -->
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/pinterest-style.css" />
@@ -307,11 +307,11 @@
             <script type="text/javascript">   
             $(window).load(function () {    
                 paceOptions = {
-                  ajax: true, // disabled
-                  document: true, // disabled
-                  eventLag: true, // disabled
+                  ajax: false, // disabled
+                  document: true, // check document ready state
+                  eventLag: true, // check for javascript
                   elements: {
-                    selectors: ['body']
+                    selectors: ['.brick'] // check for bricks
                   }
                 };  
             }) 
